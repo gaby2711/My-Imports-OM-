@@ -37,7 +37,7 @@
 
 nav{
     grid-area: nav;
-    background-color: blue;
+    background: linear-gradient(to left, rgb(106, 106, 124), rgb(27, 27, 216));
     height: 90px;
 }
 
@@ -61,7 +61,7 @@ nav ul li a{
 }
 
 footer{
-    background-color: blue;
+    background: linear-gradient(to left, rgb(106, 106, 124), rgb(27, 27, 216));
 }
 
 /*Productos y Ofertas */
