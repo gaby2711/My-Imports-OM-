@@ -5,13 +5,11 @@
     text-decoration: none;
 }
 
-.containerh{
+.containerp{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 1fr 1fr;
     grid-template-areas: 
     "logo titulo titulo"
-    "nav nav nav"
     ;
 }
 
@@ -66,19 +64,26 @@ footer{
 
 /*Productos y Ofertas */
 
-.container{
+.contenedor{
+    width: 100%;
+    height: 700px;
     display: flex;
     flex-wrap: wrap;
 }
-.cajas img{
-    width: 250px;
-    margin: 20px;
-    padding: 15px;
+
+.caja img{
+    width: 300px;
     border-radius: 10px;
 }
 
-.cajas h2{
+.caja{
+    margin: 25px;
+}
+.caja p{
+    text-align: center;
     font-size: 20px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /*nosotros*/
@@ -102,3 +107,95 @@ footer{
 }
 
 
+@media screen and (max-width: 425px) {
+    
+    /*Index*/
+    
+    .titulo{
+        font-size: 30px;
+    }
+    .logo1{
+        width: 100px;
+        height: 100px;
+    }
+    
+    nav{
+        height: 60px;
+        display: flex;
+        align-content: flex-end;
+        flex-wrap: wrap;
+    }
+    nav ul li a{
+        font-size: 15px;
+    }
+    
+    .main img{
+        width: 500px;
+        height: 300px;
+    }
+    .main{
+        display: flex;
+        justify-content: center;
+    }
+    
+    /*Ofertas y productos*/
+    
+    .contenedor{
+        display: flex;
+        flex-direction: column;
+    }
+    .caja img{
+        width: 150px;
+        height: 140px;
+    }
+    
+    .caja p{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    
+    /*Index*/
+    .titulo{
+        font-size: 30px;
+    }
+    
+    .logo{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .logo1{
+        height: 150px;
+        width: 250px;
+    }
+    
+    nav{
+        height: 60px;
+        display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    }
+    
+    nav ul li a{
+        font-size: 20px;
+    }
+    
+    .main{
+        display: flex;
+    flex-direction: row;
+    justify-content: center;
+    }
+    
+    .main img{
+        width: 700px;
+    }
+    
+    .caja img{
+        width: 250px
+    }
+    
+    .caja p{
+        font-size: 19px;
+    }
+}
