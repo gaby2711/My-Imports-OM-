@@ -1,0 +1,21 @@
+//variables//
+$width: 200px; 
+$height: 250px;
+
+.nosotros{
+    padding: 20px;
+    margin: 10px;
+}
+@mixin sizes($width, $height) {
+    height: $height;
+    width: $width;
+    }
+
+.nosotros1 img{
+    @include sizes(200px, 250px);
+}
+
+
+.nosotros2{
+    @extend .nosotros1;
+}
