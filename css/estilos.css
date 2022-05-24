@@ -1,66 +1,148 @@
 .nosotros {
   padding: 20px;
   margin: 10px;
+  text-align: center;
 }
 
 .nosotros1 img, .nosotros2 img {
-  height: 250px;
-  width: 200px;
+  height: 330px;
+  width: 580px;
+  border-radius: 15px;
+  margin: 15px;
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5843137255);
 }
 
-.containerp {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "logo titulo titulo";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
-.containerp .logo {
-  grid-area: logo;
-  background-color: #ffffff;
-}
-.containerp .logo1 {
-  width: 200px;
-  height: 250px;
-}
-.containerp .titulo {
-  grid-area: titulo;
-  background-color: #ffffff;
+
+.logo {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column-reverse;
   align-content: space-around;
-  flex-direction: column;
-  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.logo img {
+  width: 250px;
+  height: 200px;
 }
 
-nav {
-  grid-area: nav;
-  background: linear-gradient(to left, rgb(106, 106, 124), blue);
-  height: 90px;
+header {
+  width: 100%;
+  background: linear-gradient(to left, #953895, rgba(53, 63, 174, 0.7176470588));
 }
-nav ul {
+header #btn-menu {
+  display: none;
+}
+header label img {
+  display: none;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+}
+header .menu {
+  background: linear-gradient(to left, #953895, rgba(53, 63, 174, 0.7176470588));
+}
+header .menu ul {
+  list-style: none;
   display: flex;
   justify-content: center;
+}
+header .menu ul li {
   list-style: none;
-  padding: 15px;
 }
-nav li {
-  float: left;
-  margin-top: 25px;
-}
-nav a {
-  padding: 34px;
-  color: rgb(8, 8, 8);
-  font-size: 25px;
+header .menu ul li a {
+  display: block;
+  padding: 15px 20px;
+  cursor: pointer;
+  color: black;
+  font-size: 20px;
 }
 
-.main {
-  background-color: #ffffff;
+.principal {
+  text-align: center;
+  padding: 10px;
+}
+.principal h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 35px;
+  padding: 15px;
+  color: #953895;
+  text-shadow: 5px 5px 6px #000000;
+}
+.principal img {
+  width: 1300px;
+}
+
+.titulo {
+  text-align: center;
+  padding: 10px;
+}
+.titulo h2 {
+  font-size: 35px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: blueviolet;
+  text-shadow: 5px 5px 6px #000000;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+.contenedor .cajas {
+  padding: 10px;
+}
+.contenedor .cajas img {
+  width: 200px;
+  height: 200px;
+}
+.contenedor .cajas img p {
+  font-size: 20px;
+  text-align: center;
 }
 
 footer {
-  background: linear-gradient(to left, rgb(106, 106, 124), rgb(27, 27, 216));
+  background: linear-gradient(to left, #953895, rgba(53, 63, 174, 0.7176470588));
+}
+footer .redes ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+}
+footer .redes li {
+  margin: 5px;
+}
+footer .redes a {
+  padding: 1px;
+}
+footer .redes img {
+  height: 55px;
+  width: 50px;
+  margin: 10px;
+}
+footer .creado {
+  text-align: center;
+}
+footer .creado p {
+  color: #000000;
 }
 
 /*ofertas y productos*/
+.encabezado {
+  display: flex;
+  justify-content: center;
+}
+.encabezado h1 {
+  font-size: 25px;
+  color: blueviolet;
+  text-shadow: 5px 5px 6px #000000;
+}
+
 .contenedor {
   width: 100%;
   display: flex;
@@ -69,6 +151,10 @@ footer {
 .contenedor .caja img {
   width: 300px;
   border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.contenedor img:hover {
+  transform: scale(1.1);
 }
 .contenedor .caja {
   margin: 25px;
@@ -78,12 +164,32 @@ footer {
   font-size: 20px;
   font-weight: 600;
   font-family: Arial, Helvetica, sans-serif;
+  padding: 12px;
 }
 
 /*CONTACTO*/
 .contacto {
   margin: 10px;
   font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-shadow: 5px 5px 6px #000000;
+}
+
+.formulario {
+  text-align: center;
+  justify-content: center;
+  padding: 8px;
+  margin: 20px;
+  width: 70%;
+  background-color: rgba(128, 63, 128, 0.7176470588);
+  border-radius: 25px;
+}
+.formulario .formulario1 {
+  padding: 8px;
+  font-size: 30px;
+}
+.formulario .formulario1 input {
+  font-size: 20px;
 }
 
 .ubicacion {
@@ -91,96 +197,338 @@ footer {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@media screen and (max-width: 425px) {
-  /*Index*/
-  .titulo {
-    font-size: 30px;
+@media screen and (max-width: 600px) {
+  /*index y ofertas, productos*/
+  .logo img {
+    width: 250px;
+    height: 200px;
   }
 
-  .logo1 {
-    width: 100px;
-    height: 100px;
-  }
-
-  nav {
-    height: 60px;
-    display: flex;
-    align-content: flex-end;
-    flex-wrap: wrap;
-  }
-
-  nav ul li a {
-    font-size: 15px;
-  }
-
-  .main img {
-    width: 500px;
-    height: 300px;
-  }
-
-  .main {
+  .principal h1 {
+    font-size: 35px;
     display: flex;
     justify-content: center;
   }
 
-  /*Ofertas y productos*/
-  .contenedor {
+  .principal img {
+    width: 550px;
+  }
+
+  .titulo h2 {
+    font-size: 40px;
+  }
+
+  .contenedor .caja img {
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+  }
+
+  .contenedor .caja p {
+    font-size: 30px;
+  }
+
+  footer .redes img {
+    width: 60px;
+    height: 60px;
+  }
+
+  footer .creado p {
+    font-size: 25px;
+  }
+
+  /*nosotros*/
+  .nosotros .nosotros1 img, .nosotros .nosotros2 img {
+    width: 400px;
+    height: 250px;
+  }
+
+  h1 {
+    font-size: 30px;
+    margin: 20px;
+  }
+
+  /*Contacto*/
+  .cuadro {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
   }
 
-  .caja img {
-    width: 150px;
-    height: 140px;
-  }
-
-  .caja p {
-    font-size: 15px;
+  .cuadro .formulario .formulario1 .for textarea {
+    width: 200px;
+    height: 150px;
   }
 }
-@media screen and (max-width: 1024px) {
-  /*Index*/
-  .titulo {
+@media screen and (max-width: 1200px) {
+  /*index y ofertas, productos*/
+  .logo img {
+    width: 330px;
+    height: 250px;
+  }
+
+  .logo h1 {
+    font-size: 40px;
+  }
+
+  .principal h1 {
+    font-size: 80px;
+  }
+
+  .principal img {
+    width: 1050px;
+  }
+
+  .titulo h2 {
+    font-size: 70px;
+  }
+
+  .encabezado h1 {
+    font-size: 100px;
+  }
+
+  .contenedor .caja img {
+    width: 300px;
+    height: 200px;
+  }
+
+  .contenedor .caja p {
     font-size: 30px;
   }
 
-  .logo {
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .logo1 {
-    height: 150px;
-    width: 250px;
-  }
-
-  nav {
+  footer .redes img {
+    width: 80px;
     height: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
   }
 
-  nav ul li a {
-    font-size: 20px;
+  footer .creado p {
+    font-size: 35px;
   }
 
-  .main {
+  /*nosotros*/
+  .nosotros .nosotros1 img, .nosotros .nosotros2 img {
+    width: 650px;
+    height: 350px;
+  }
+
+  h1 {
+    font-size: 50px;
+    margin: 30px;
+  }
+
+  .cuadro {
     display: flex;
-    flex-direction: row;
     justify-content: center;
   }
 
-  .main img {
-    width: 700px;
+  .cuadro .formulario .formulario1 .for textarea {
+    width: 200px;
+    height: 150px;
+  }
+}
+@media screen and (max-width: 900px) {
+  /*index y ofertas, productos*/
+  header label img {
+    width: 60px;
+    height: 60px;
+    display: block;
   }
 
-  .caja img {
+  .menu {
+    position: absolute;
+    background: linear-gradient(to left, #953895, rgba(53, 63, 174, 0.7176470588));
+    width: 70%;
+    margin-left: -70%;
+    transition: all 0.5s;
+  }
+
+  .menu ul {
+    flex-direction: column;
+  }
+
+  .menu li {
+    color: #ee8f97;
+  }
+
+  .menu a {
+    font-size: 20px;
+    color: black;
+  }
+
+  #btn-menu:checked ~ .menu {
+    margin: 0;
+  }
+
+  .principal h1 {
+    font-size: 45px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .principal img {
+    width: 880px;
+  }
+
+  .titulo h2 {
+    font-size: 90px;
+  }
+
+  .contenedor .caja img {
+    width: 350px;
+    height: 250px;
+    padding: 20px;
+  }
+
+  .contenedor .caja p {
+    font-size: 35px;
+  }
+
+  footer .redes img {
+    width: 80px;
+    height: 65px;
+  }
+
+  footer .creado p {
+    font-size: 35px;
+  }
+
+  /*nosotros*/
+  .nosotros .nosotros1 img, .nosotros .nosotros2 img {
+    width: 600px;
+    height: 350px;
+  }
+
+  h1 {
+    font-size: 50px;
+    margin: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  /*index y ofertas, productos*/
+  .logo img {
     width: 250px;
+    height: 200px;
   }
 
-  .caja p {
-    font-size: 19px;
+  .principal h1 {
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .principal img {
+    width: 550px;
+  }
+
+  .titulo h2 {
+    font-size: 40px;
+  }
+
+  .contenedor .caja img {
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+  }
+
+  .contenedor .caja p {
+    font-size: 30px;
+  }
+
+  footer .redes img {
+    width: 60px;
+    height: 60px;
+  }
+
+  footer .creado p {
+    font-size: 25px;
+  }
+
+  /*nosotros*/
+  .nosotros .nosotros1 img, .nosotros .nosotros2 img {
+    width: 400px;
+    height: 250px;
+  }
+
+  h1 {
+    font-size: 30px;
+    margin: 20px;
+  }
+
+  /*Contacto*/
+  .cuadro {
+    display: flex;
+    justify-content: center;
+  }
+
+  .cuadro .formulario .formulario1 .for textarea {
+    width: 200px;
+    height: 150px;
+  }
+}
+@media screen and (max-width: 400px) {
+  /*index y ofertas, productos*/
+  .logo img {
+    width: 330px;
+    height: 250px;
+  }
+
+  .logo h1 {
+    font-size: 40px;
+  }
+
+  .principal h1 {
+    font-size: 24px;
+  }
+
+  .principal img {
+    width: 340px;
+  }
+
+  .titulo h2 {
+    font-size: 22px;
+  }
+
+  .contenedor .caja img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .contenedor .caja p {
+    font-size: 15px;
+  }
+
+  footer .redes img {
+    width: 35px;
+    height: 35px;
+  }
+
+  footer .creado p {
+    font-size: 15px;
+  }
+
+  /*nosotros*/
+  .nosotros .nosotros1 img, .nosotros .nosotros2 img {
+    width: 300px;
+    height: 150px;
+  }
+
+  h1 {
+    font-size: 25px;
+    margin: 10px;
+  }
+
+  .cuadro {
+    display: flex;
+    justify-content: center;
+  }
+
+  .cuadro .formulario .formulario1 input[type=text] {
+    width: 160px;
+    height: 25px;
+  }
+
+  .cuadro .formulario .formulario1 .for textarea {
+    width: 200px;
+    height: 150px;
   }
 }
 

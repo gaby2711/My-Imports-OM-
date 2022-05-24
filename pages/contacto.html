@@ -8,121 +8,88 @@
     <meta name="descrption" content="En my imports estamos especializados en productos para el hogar, belleza y tecnologia">
     <meta name="keywords" content="ventas de productos, productos para el hogar, cagadores portatiles, organizadores de maquillaje,
     ofertas, Pizarra para niños">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/c3a150fd4e.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="../assets/logo/Logo.jpg" type="image/x-icon">
     <link rel="stylesheet" href="../css/estilos.css">
-    <link rel="stylesheet" href="../libs/css/bootstrap.min.css">
+
     <title>My Imports O.M-Contacto</title>
 </head>
 <body>
-    <!--Grilla-->
-    <header class="containerp">
     
-        <h1 class="titulo">My Imports O.M</h1>
-        
-        <div class="Logo">
-            <img class="logo1" src="../assets/logo/Logo.jpg" alt="logo">
-        </div>
-        </header>
-        
-        <!--Menu-->
-                
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="productos.html">productos</a></li>
-                <li><a href="ofertas.html">ofertas</a></li>
-                <li><a href="contacto.html">Contacto</a> </li>
-            </ul>
-            
-        </nav>
+    <div class="logo">
+        <img src="../assets/logo/Logo.jpg"> 
+        <h1></h1>
+    </div>
+    <header> 
+    <input type="checkbox" id="btn-menu">
+        <label for="btn-menu"> <img src="../assets/imagenes/menu.png" alt=""></label>
+    <nav class="menu">
+        <ul>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="ofertas.html">Ofertas</a></li>
+        <li><a href="contacto.html"> Contacto</a></li>
+        </ul>
+    </nav>
+    </header>
 
-        
-        <div class="compra"> 
-
-            <div class="abc" >
-                <img  src ="../assets/imagenes/compra1.jpg" alt ="" >
-            </div>
-
-            <div class="def"> 
-                <img  src ="../assets/imagenes/compras2.jpg" alt ="" >
-            </div>
-
-        </div>
-        
-        <main> 
+    
+        <main class="contacto">
             <h1> 
                 Dejanos tu consulta y te atenderemos 
                 en breve
             </h1>
-            </main>
-                <form action="procesar.php" method="">
-                    <p>
+        </main>
+        <div class="cuadro">
+            <form class="formulario">
+                <div class="formulario1">
                     <label for="nombre">Nombre: </label>
-                    <input type="text" name="nombre" placeholder="ingresatunombre"> 
-                    </p>
-                    <p>
+                    <input type="text" name="nombre"> 
+                </div>
+                
+                <div class="formulario1">
                     <label for="apellido">Apellido: </label>
-                    <input type="text" name="apellido" placeholder="ingresatuapellido"> 
-                    </p>
-                    <p>
-                    <label for="correo electronico"> Correo Electronico:</label>
-                    <input type="text" name="correo electronico" placeholder="ingresaelcorreoelectronico">
-                    </p>
-                    <p>
-                    <label for="telefono"> Telefono:</label>
-                    <input type="tel" name="telefono" placeholder="ingresatutelefono"> 
-                    </p>
-                    <h4>Consulta</h4>
-                    <textarea name="comentario" id="" cols="40" rows="12"></textarea>
-                    <p>
-                        <input type="submit" valu="Enviar"> 
-                    </p>   
-                        <p>
-                            <input type="reset" value="Borrar formulario">
-                        </p>
-                </form>
-                </main>
-
-        
-        <footer class="bg-light text-center text-white">
-            <!-- Grid container -->
-            <div class="container p-4 pb-0">
-            <!-- Section: Social media -->
-            <section class="mb-4">
-    
-                <!-- Facebook -->
-                <a
-                class="btn btn-primary btn-floating m-1"
-                style="background-color: #3b5998;"
-                href="#"> <img src="../assets/imagenes/facebook.jpg" alt="" width="40px"
-                    height="35px"></a>
-    
-                <!-- Instagram -->
-                <a
-                class="btn btn-primary btn-floating m-1"
-                style="background-color: #e6914b;"
-                href="#"> <img src="../assets/imagenes/instagram-logo.jpg" alt=""
-                        width="40px" height="35px">
-                    </a>
+                    <input type="text" name="apellido"> 
+                </div>
                     
-        
-                <!-- Whatsapp -->
-                <a
-                class="btn btn-primary btn-floating m-1"
-                style="background-color: #6cd08f;"
-                href="#"> <img src="../assets/imagenes/whatsapp.png" alt=""
-                        width="40px" height="35px">
-                    </a>
-                </section>
+                <div class="formulario1">
+                    <label for="correo electronico"> Email:</label>
+                    <input type="text" name="correo">
+                </div>
+
+                <div class="formulario1">
+                    <label for="telefono"> Telefono:</label>
+                    <input type="text" name="telefono"> 
+                </div>
+
+                <div class="formulario1">
+                    <h4>Consulta</h4>
+                    <textarea name="comentario" cols="32" rows="8"></textarea>
+                </div>
+                <input type="submit" valu="Enviar"> 
+                </form>
             </div>
-        
-            <!-- Copyright -->
-            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2022 Copyright:
-            <a class="text-white" href="#">My Imports O.M</a>
+
+    <footer>
+        <div class="redes">
+            <ul>
+                <li>
+                    <a href="#"> <img src="../assets/imagenes/whatsapp.png"alt=""></a>
+                </li>
+                
+                <li>
+                    <a href="#"> <img src="../assets/imagenes/facebook.png" alt=""><a>
+                </li>
+                
+                <li>
+                    <a href="#"> <img src="../assets/imagenes/instagram.png"alt=""><a>
+                </li>
+            </ul>
+        </div>
+            <div class="creado">
+                <p>Todos los derechos reservados. &copy; My Imports</p>
             </div>
-        </footer>
-        <script src="../libs/js/bootstrap.min.js"></script>
+    </footer>
 </body>
 </html>

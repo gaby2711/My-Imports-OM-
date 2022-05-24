@@ -5,6 +5,7 @@ $height: 250px;
 .nosotros{
     padding: 20px;
     margin: 10px;
+    text-align: center;
 }
 @mixin sizes($width, $height) {
     height: $height;
@@ -12,7 +13,10 @@ $height: 250px;
     }
 
 .nosotros1 img{
-    @include sizes(200px, 250px);
+    @include sizes(580px, 330px);
+    border-radius: 15px;
+    margin: 15px;
+    box-shadow: 15px 15px 15px #00000095;
 }
 
 
